@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html> 
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Custo Plástico</title> 
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+      <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+      <script src="jquery-1.7.1.min.js"></script>
+      <script src="jquery.mobile-1.1.0.min.js"></script>
+      <script src="abspla.js"></script>
+  </head> 
+  <body> 
+    <div data-role="page">
+      <div data-role="header">
+        <h1>Custo Plástico</h1>
+      </div><!-- /header -->
+      <div data-role="content">
+
+        <fieldset data-role="controlgroup">
+          <legend>Material:</legend>
+          <input type="radio" name="material" id="pla" value="pla" checked="checked" onclick="setDensidade();" />
+          <label for="pla">PLA</label>
+          <input type="radio" name="material" id="abs" value="abs" onclick="setDensidade();" />
+          <label for="abs">ABS</label>
+        </fieldset>
+
+        <div data-role="fieldcontain">
+          <label for="name">Diâmetro do fio(mm):</label>
+          <input type="text" name="diametro" id="diametro" value="3"
+  onkeyup="updateValues();"
+  onKeypress= 'if ( (event.keyCode < 48 || event.keyCode > 57) && event.keyCode!=46 ) event.returnValue = false;'
+  onkeyup="updateValues();"
+  onKeypress= 'if ( (event.keyCode < 48 || event.keyCode > 57) && event.keyCode!=46 ) event.returnValue = false;'
+ />
+        </div>
+        <div data-role="fieldcontain">
+          <label for="name">Comprimento (m):</label>
+          <input type="text" name="comprimento" id="comprimento" value="8"
+  onkeyup="updateValues();"
+  onKeypress= 'if ( (event.keyCode < 48 || event.keyCode > 57) && event.keyCode!=46 ) event.returnValue = false;'
+  onkeyup="updateValues();"
+  onKeypress= 'if ( (event.keyCode < 48 || event.keyCode > 57) && event.keyCode!=46 ) event.returnValue = false;'
+ />
+        </div>
+        <div data-role="fieldcontain">
+          <label for="name">Densidade (g/cm3):</label>
+          <input type="text" name="densidade" id="densidade" value="1.24"  disabled="disabled" />
+        </div>
+        <div data-role="fieldcontain">
+          <label for="name">Volume (cm3):</label>
+          <input type="text" name="volume" id="volume" value=""   disabled="disabled"/>
+        </div>
+        <div data-role="fieldcontain">
+          <label for="name">Massa (g):</label>
+          <input type="text" name="massa" id="massa" value=""  disabled="disabled" />
+        </div>
+        <div data-role="fieldcontain">
+          <label for="name">Valor por kg em R$:</label>
+          <input type="text" name="valorkg" id="valorkg" value="100.00"
+  onkeyup="updateValues();"
+  onKeypress= 'if ( (event.keyCode < 48 || event.keyCode > 57) && event.keyCode!=46 ) event.returnValue = false;'
+  onkeyup="updateValues();"
+  onKeypress= 'if ( (event.keyCode < 48 || event.keyCode > 57) && event.keyCode!=46 ) event.returnValue = false;'
+ />
+        </div>
+        <div data-role="fieldcontain">
+          <label for="name">Valor final em R$:</label>
+          <input type="text" name="valorreais" id="valorreais" value=""  disabled="disabled" />
+        </div>
+      </div><!-- /content -->
+    </div><!-- /page -->
+
+<script type="text/javascript">
+updateValues();
+</script>
+
+</body>
+</html>
